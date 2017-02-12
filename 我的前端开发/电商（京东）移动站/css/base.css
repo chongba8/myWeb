@@ -1,0 +1,85 @@
+/*
+* @Author: Administrator
+* @Date:   2017-02-04 18:50:05
+* @Last Modified by:   Administrator
+* @Last Modified time: 2017-02-10 22:56:25
+*/
+*,
+::before,
+::after{
+	margin: 0;
+	padding: 0;
+	-webkit-tap-highlight-color: transparent;/* 清除webkit点击默认的高亮效果 */
+	-webkit-box-sizing: border-box;
+}
+body{
+	font-size: 14px;
+	font-family: "Microsoft YaHei",sans-serif;
+	color: #000;
+}
+a{
+	text-decoration: none;
+	color: #000;
+}
+a:hover{
+	cursor: pointer;
+}
+ul,ol{
+	list-style: none;
+}
+input,textarea{
+	border: none;
+	resize: none;
+	outline: none;/* 清除选中效果 */
+
+     -webkit-appearance: none;
+}
+/* 清除浮动 */
+.clearfix::before,
+.clearfix::after{
+	content: ".";
+	display: block;
+	height: 0;
+	line-height: 0;
+	visibility: hidden;
+	clear: both;
+}
+[class^="icon_"]{
+	background: url('../imgs/sprites.png') no-repeat;
+	-webkit-background-size: 200px 200px;
+	background-size: 200px 200px;
+}
+.icon_back{
+	display: block;
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	margin: 14px 10px;
+	background-position:-20px 0;
+}
+.icon_menu{
+
+	display: block;
+	width: 40px;
+	height: 44px;
+	position: absolute;
+	background-position: -60px 0;
+	background-clip: content-box;
+	padding: 12px 10px;
+	-webkit-background-origin: content-box;
+	background-origin: content-box;
+	top: 0;
+	right: 0;
+}
+.cat-topbar{
+	height: 45px;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	top: 0; 
+	background: url('../imgs/header-bg.png') repeat-x;
+	-webkit-background-size: 1px 44px;
+	background-size: 1px 44px;
+	border-bottom: 1px solid #e0e0e0;
+	z-index: 1000;
+}

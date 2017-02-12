@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul,ol{
+            list-style: none;
+        }
+        #box{
+            width: 490px;
+            height: 170px;
+            position: relative;
+            margin: 100px auto;
+            overflow: hidden;
+            border:1px solid #ccc;
+
+        }
+        #box ul{
+            width: 1000%;
+            float: left;
+          }
+        #box ul li{
+            float: left;
+            margin-right: 2px;
+        }
+        #box image{
+            /*float: left;*/
+            vertical-align: top;
+        }
+        .slider ol{
+            position: absolute;
+            left:50%;
+            bottom:10px;
+            margin-left: -76px;
+        }
+        #box ol li{
+            float: left;
+            width: 18px;
+            height: 18px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 20px;
+            background-color: pink;
+            cursor: pointer;
+        }
+       #box .current{
+            background-color: purple;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var slider =document.getElementById("box");
+            var ul=slider.children[0];
+            var ol=slider.children[1];
+            var ollis=ol.children;
+            var leader= 0,target=0;
+            for(var i= 0,len=ollis.length; i<len;i++){
+                ollis[i].index=i;
+                ollis[i].onmouseover=function(){
+                   for(var j= 0,len=ollis.length; j<len; j++){
+                       ollis[j].className="";
+                   }
+                    this.className="current";
+                    target = -this.index*492;
+                }
+
+            }
+            setInterval(function () {
+                leader=leader+(target-leader)/10 ;
+                ul.style.marginLeft=leader+"px";
+                console.log(leader);
+            },50);
+        }
+    </script>
+</head>
+<body>
+<div id="box" class="slider">
+    <ul>
+        <li><img src="images/1.jpg" alt=""/></li>
+        <li><img src="images/2.jpg" alt=""/></li>
+        <li><img src="images/3.jpg" alt=""/></li>
+        <li><img src="images/4.jpg" alt=""/></li>
+        <li><img src="images/5.jpg" alt=""/></li>
+    </ul>
+        <ol>
+            <li class="current">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ol>
+</div>
+</body>
+</html>

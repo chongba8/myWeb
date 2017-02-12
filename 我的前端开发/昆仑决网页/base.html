@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        /* css reset www.admin10000.com */
+        body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td { margin:0; padding:0; }
+        body { background:#fff; color:#555; font-size:14px; font-family: Verdana, Arial, Helvetica, sans-serif; }
+        td,th,caption { font-size:14px; }
+        h1, h2, h3, h4, h5, h6 { font-weight:normal; font-size:100%; }
+        address, caption, cite, code, dfn, em, strong, th, var { font-style:normal; font-weight:normal;}
+        a { color:#555; text-decoration:none; }
+        a:hover { text-decoration:none;color:red; }
+        img { border:none; }
+        ol,ul,li { list-style:none; }
+        input, textarea, select, button { font:14px Verdana,Helvetica,Arial,sans-serif; }
+        table { border-collapse:collapse; }
+        html {overflow-y: scroll;}
+        /* css common */
+        .clearfix:after {content: "."; display: block; height:0; clear:both; visibility: hidden;}
+        .clearfix { *zoom:1; }
+        .w{
+            width: 1200px;
+            margin: 0 auto;
+            /*background-color: purple;*/
+        }
+        .up-header{
+            width: 100%;
+            background-color: #EFEFEF;
+        }
+        .header{
+            height: 50px;
+        }
+        .header-weibo{
+            float: left;
+            width: 25px;
+            height: 25px;
+            margin-right: 19px;
+            margin-top: 15px;
+            background: url("images/sina.png");
+        }
+        .header-weixin{
+            float: left;
+            width: 25px;
+            height: 25px;
+            margin-right: 19px;
+            margin-top: 15px;
+            background: url("images/wechat.png");
+        }
+        .header-app{
+            float: left;
+            width: 25px;
+            height: 25px;
+            margin-right: 19px;
+            margin-top: 15px;
+            background: url("images/app%20(1).png");
+        }
+        .header-left{
+            width: 200px;
+        }
+        .header-left a{
+            display: block;
+            width: 25px;
+            height: 25px;
+            cursor: pointer;
+        }
+        .register,.login{
+            float: right;
+            margin-top: 20px;
+        }
+        .header-right a{
+            height: 14px;
+            margin-left: 20px;
+            margin-top: 20px;
+            float: right;
+            font:14px/14px "宋体";
+            color:red;
+        }
+        .down-header{
+            width: 100%;
+            background-color: #191919;
+            height: 75px;
+            overflow: hidden;
+        }
+        .nav li{
+            float: left;
+            margin-right: 23px;
+            text-align: center;
+            margin-top: 19px;
+        }
+        .nav a{
+            display: block;
+            cursor: pointer;
+            color:#FFFFFF;
+        }
+        .nav a:hover{
+            color:red;
+        }
+       .nav .nav-logo{
+            width: 90px;
+            height: 75px;
+            margin:0 65px 0 40px;
+        }
+        .nav .nav-logo a{
+            display: block;
+            width: 90px;
+            height: 75px;
+            background: url("images/logo(1).gif");
+        }
+        .content{
+            height: 2000px;
+            background-color: purple;
+        }
+        .down-header{
+            position: fixed;
+            top: 50px;
+            left: 0;
+        }
+        .footer{
+            width: 100%;
+            height: 485px;
+            background-color: #F1F1F1;
+        }
+        .up-footer{
+            padding-top: 60px;
+            overflow: hidden;
+
+        }
+        .up-footer dl{
+            float: left;
+            width: 410px;
+            padding-left: 100px;
+            margin-right: 80px;
+            margin-bottom: 50px;
+        }
+        .up-footer dt{
+            margin-bottom: 50px;
+            border-left: 3px solid red;
+            padding-left: 5px;
+            font-weight: 600;
+            font-size: 16px;
+
+        }
+        .up-footer dd{
+            float: left;
+            width: 106px;
+            line-height: 30px;
+            margin-right: 30px;
+            font-size: 14px;
+
+        }
+        .middle-footer{
+            text-align: center;
+        }
+        .down-footer{
+            text-align: center;
+            margin-top: 60px;
+        }
+        .down-footer h2{
+            line-height: 50px;
+        }
+        .upfooter-border{
+            border-left: 1px solid #ccc;
+        }
+    </style>
+    <script src="js/scroll封装.js"></script>
+    <script>
+        window.onload= function () {
+//            window.scrollTo(0,0);
+            var down_header=document.getElementById("down_header");
+            window.onscroll=function(){
+                var top=scroll().top<=50?50-scroll().top:0;
+                down_header.style.top=top+"px";
+            }
+
+        }
+    </script>
+</head>
+<body>
+   <div class="up-header">
+       <div class="header w" >
+           <div class="header-left">
+               <a href="#" class="header-weibo"></a>
+               <a href="#" class="header-weixin"></a>
+               <a href="#" class="header-app"></a>
+           </div>
+           <!--<div><a href="#"></a></div>-->
+          <div class="header-right">
+              <a href="#" class="register">注册</a>
+              <a href="#" class="login">登录</a>
+          </div>
+       </div>
+       <div class="down-header" id="down_header">
+           <div class="nav w">
+               <ul>
+                   <li><a href="#">首页<br>INDEX</a></li>
+                   <li> <a href="#">赛事<br>EVENT</a></li>
+                   <li><a href="#">视频<br>VIDEO</a></li>
+                   <li><a href="#">选手<br>PLAYER</a></li>
+                   <li> <a href="#">新闻<br>NEWS</a></li>
+                   <li> <a href="#">图片<br>NEWS</a></li>
+                   <li class="nav-logo"><a  href=""></a></li>
+                   <li><a href="#">昆仑宝贝<br>KUNLUN BABY</a></li>
+                   <li> <a href="#">在线售票<br>BUY TICKETS</a></li>
+                   <li><a href="#">HOT 搏击学院<br>K-S COLLEGE</a></li>
+                   <li><a href="#">昆仑商城<br>KUNLUN MALL</a></li>
+                   <li><a href="#">走近昆仑决<br>ABOUT</a></li>
+               </ul>
+           </div>
+       </div>
+
+   </div>
+   <div class="content w"></div>
+    <div class="footer">
+        <div class="up-footer w">
+            <dl>
+                <dt><a href="#">友情链接</a></dt>
+                <dd><a href="#">昆仑决官方微博</a></dd>
+                <dd><a href="#">拳击时空</a></dd>
+                <dd><a href="#"> 拳击航母</a></dd>
+                <dd><a href="#">  江苏卫视</a></dd>
+                <dd><a href="#">蒙牛M-PLUS</a></dd>
+                <dd><a href="#"> 本草堂Phuket</a></dd>
+                <dd><a href="#">Top Team</a></dd>
+                <dd><a href="#"> 中搜搜悦</a></dd>
+                <dd><a href="#"> 东方荣誉俱乐部</a></dd>
+                <dd><a href="#">龙象天和</a></dd>
+                <dd><a href="#"> K·F服饰</a></dd>
+                <dd><a href="#"></a></dd>
+            </dl>
+            <dl class="upfooter-border">
+                <dt><a href="#">合作媒体</a></dt>
+                <dd><a href="#">网易直播</a></dd>
+                <dd><a href="#"> 腾讯体育</a></dd>
+                <dd><a href="#">新浪体育</a></dd>
+                <dd><a href="#">  搜狐体育</a></dd>
+                <dd><a href="#"> 网易体育</a></dd>
+                <dd><a href="#"> 凤凰体育</a></dd>
+                <dd><a href="#"> 虎扑体育</a></dd>
+                <dd><a href="#">爱奇艺</a></dd>
+                <dd><a href="#">今日头条</a></dd>
+                <dd><a href="#">新浪微博</a></dd>
+                <dd><a href="#" 百度贴吧</a></dd>
+                <dd><a href="#"> 微信天天快报</a></dd>
+                <dd><a href="#">腾讯视频V+</a></dd>
+                <dd><a href="#">头条视频</a></dd>
+                <dd><a href="#"> 新华网</a></dd>
+                <dd><a href="#">中新网</a></dd>
+                <dd><a href="#">中国商网海子角</a></dd>
+            </dl>
+        </div>
+        <div class="w middle-footer">
+            北京昆尚文化传媒有限责任公司（以下简称昆尚传媒）成立于2014年。昆尚传媒是目前国内最顶级的职业搏击赛事运营单位，也是集搏击赛事执行、电视节目运营、影视剧制作、游戏开发等于一体的现代综合型新锐文化传媒公司。公司成立后，携手江苏卫视、蓝色光标、五岳盛泰及娱乐工厂等知名传媒和投资机构，紧锣密鼓的开展《昆仑决世界极限格斗系列赛》项目，为中国格斗爱好者呈上一场场激动人心的饕餮大宴。
+        </div>
+        <div class="down-footer">
+           <h2><a href="">招聘人才</a><a href=""> 商务合作</a></h2>
+            <p> ©2013-2016 北京昆尚文化传媒有限责任公司 版权所有 电话：010-50923236 地址：北京市朝阳区安定门外大街1号信义大厦4层 京ICP备15049866号-2</p>
+        </div>
+    </div>
+</body>
+</html>

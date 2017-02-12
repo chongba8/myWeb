@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<p>
+    fslkfjslfjslchaofnnsfjeislaba   slfkjweiofslfj af  s fjweofsl
+</p>
+<button id="btn"></button>
+</body>
+<script>
+    var btn=document.getElementById("btn");
+    var p=document.getElementsByTagName("p");
+    btn.onclick= function (e) {
+        if (document.body.webkitRequestFullScreen)
+            p[0].webkitRequestFullScreen();
+        else
+            alert("不支持全屏");
+    }
+
+</script>
+</html>

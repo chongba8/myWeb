@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{margin:0;padding:0;}
+        ul,ol{list-style:none}
+        .box {
+            width: 730px;
+            height: 454px;
+            margin: 100px auto;
+            overflow: hidden;
+            position: relative;
+        }
+        .circle {
+            position: absolute;
+            width: 300px;
+            height: 18px;
+            left: 50%;
+            margin-left: -150px;
+            bottom: 20px;
+        }
+        .circle span {
+            float: left;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background-color: pink;
+            text-align: center;
+            line-height: 18px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        .circle .current{
+            background-color: purple;
+            display: block;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var box=document.getElementById("father");/*获取父元素*/
+            var circle=document.createElement("div");/*创建一个div*/
+            box.appendChild(circle);/*给父元素添加这个div孩子*/
+            circle.setAttribute("class","circle");
+            var lis=document.getElementById("one").getElementsByTagName("li");
+            for(var i=0; i<lis.length;i++){
+                var spans=document.createElement("span");/*创建lis.length个span*/
+                spans.innerHTML=i+1;
+                circle.appendChild(spans);
+            }
+            var span=circle.children;
+            span[0].className="current";
+            for(var i=0;i<span.length;i++){
+                span[i].index=i;
+                span[i].onmouseover=function(){
+                    for(var j=0;j<span.length;j++){
+                        span[j].className="";
+                        lis[j].style.display="none";
+                    }
+                    this.className="current";
+                    lis[this.index].style.display="block"; }
+
+            }
+
+        }
+    </script>
+</head>
+<body>
+<div class="box" id="father">
+    <div class="slider">
+        <ul id="one">
+            <li><img src="images/11.jpg" alt=""/></li>
+            <li><img src="images/22.jpg" alt=""/></li>
+            <li><img src="images/33.jpg" alt=""/></li>
+            <li><img src="images/44.jpg" alt=""/></li>
+            <li><img src="images/55.jpg" alt=""/></li>
+            <li><img src="images/66.jpg" alt=""/></li>
+            <li><img src="images/55.jpg" alt=""/></li>
+            <li><img src="images/44.jpg" alt=""/></li>
+            <li><img src="images/33.jpg" alt=""/></li>
+            <li><img src="images/22.jpg" alt=""/></li>
+        </ul>
+    </div>
+
+</div>
+</body>
+</html>

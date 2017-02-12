@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #box{
+            width: 200px;
+            height: 50px;
+            margin: 100px auto;
+            border: 1px solid #ccc;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+
+            var future=new Date("2017/8/26 11:45:32");
+            var box=document.getElementById("box");
+
+            setInterval(func,1000);
+            function func(){
+                var now=new Date();
+                var time=future.getTime()-now.getTime();
+//                console.log(time);
+                var sec=parseInt(time/1000);
+                var day=parseInt(sec/3600/24);
+                var hour=parseInt(sec/3600%24);
+                var minutes=parseInt(sec/3600%60);
+                var miao=parseInt(sec%60);
+                day<10? day="0"+day:day;
+                hour<10? hour="0"+hour:hour;
+                minutes<10? minutes="0"+minutes:minutes;
+                miao<10? miao="0"+miao:miao;
+                box.innerHTML="距离您的生日还有"+day+"天"+hour+"小时"+minutes+"分钟"+miao+"秒"
+            }
+
+        }
+    </script>
+</head>
+<body>
+<div id="box"></div>
+</body>
+</html>

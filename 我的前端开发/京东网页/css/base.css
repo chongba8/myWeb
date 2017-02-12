@@ -1,0 +1,337 @@
+@charset "UTF-8";
+/*css 初始化 */
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img { margin:0; padding:0; }
+fieldset, img,input,button { border:none; padding:0;margin:0;outline-style:none; }
+ul, ol { list-style:none; }
+input { padding-top:0; padding-bottom:0; font-family: "SimSun","宋体";}
+select, input { vertical-align:middle;}
+select, input, textarea { font-size:12px; margin:0; }
+textarea { resize:none; } /*防止拖动*/
+img {border:0;	vertical-align:middle; }  /*  去掉图片低测默认的3像素空白缝隙*/
+table { border-collapse:collapse; }
+body {
+    font:12px/150% Arial,Verdana,"\5b8b\4f53";
+    color:#666;
+    background:#fff
+}
+.clearfix:before,.clearfix:after {
+    content:"";
+    display:table;
+}
+.clearfix:after{clear:both;}
+.clearfix{
+    *zoom:1;/*IE/7/6*/
+}
+a {color:#666; text-decoration:none; }
+a:hover{color:#C81623;}
+h1,h2,h3,h4,h5,h6 {text-decoration:none;font-weight:normal;font-size:100%;}
+s,i,em{font-style:normal;text-decoration:none;}
+.col-red{color: #C81623!important;}
+
+/*公共类*/
+.w {  /*版心 提取 */
+    width: 1210px;
+    margin:0 auto;
+    
+}
+.fl {
+    float:left
+}
+.fr {
+    float:right
+}
+.al {
+    text-align:left
+}
+.ac {
+    text-align:center
+}
+.ar {
+    text-align:right
+}
+.hide {
+    display:none
+}
+li{
+    list-style: none;
+}
+
+body .shortcut{
+    height: 30px;
+    line-height: 30px;
+    background-color: #F1F1F1;
+}
+.fl .dt,
+.shortcut .fore{
+    position: relative;
+    padding: 0 15px 0 10px;
+    font: bold;
+   
+  /*   background-color: yellowgreen; */
+}
+.dt i,
+.fore i{
+    position: absolute;
+    font: 400 15px/30px "宋体" ;
+    top: 12px;
+    right: 0px;
+    width: 15px;
+    height: 30px;
+    overflow: hidden;
+   /*  background-color: red; */
+}
+ .dt s,
+ .fore s{
+    position: absolute;
+    top: -15px;
+    left: 0;
+    /* background-color: yellowgreen; */
+}
+ .fr li{
+    float: left;
+    padding-left: 12px;
+    padding-right: 12px;
+ }
+ .fr .line{
+    width: 1px;
+    height: 10px;
+    margin-top: 11px;
+    padding: 0;
+    background-color: #CCCCCC;
+ }
+ 
+ .tu1{
+    float: left;
+    width: 200px;
+    height: 200px;
+   
+ }
+ .tu1 a{
+    float: left;
+    display: block;
+    width: 200px;
+    height: 200px;
+    margin: 0;
+    padding: 0;
+
+ }
+ .search{
+    width: 538px;
+    height: 36px;
+    margin: 30px 0 0 100px;
+    float: left;
+    border: 1px solid red;
+ }
+
+ .search input{
+    float: left;
+    height: 36px;
+    width: 450px;
+    padding-left: 10px;
+    margin-top: 0;
+    font: 16px/36px "宋体";
+ }
+ .search button{
+    float: right;
+    padding-right: 10px;
+    padding-left: 10px;
+    height: 36px;
+    font: 18px/36px  "microsoft yahei";
+    background-color: red;
+    cursor: pointer;
+ }
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1; /*IE/7/6*/
+}
+
+ .car{
+    float: right;
+    height: 36px;
+    border: 2px solid #DFDFDF;
+    position: relative;
+    margin-top: 30px;
+    padding:1px 30px 0 30px;
+    font: 16px/36px "microsoft yahei";
+ }
+
+ .car1{
+   position: absolute;
+   width: 16px;
+   height: 16px;
+   bottom: 10px;     
+   left: 10px;
+   background: url('../images/car.png') no-repeat;
+   
+ }
+
+.cn{
+    position: absolute;
+    font: 5px/12px  "微软雅黑";
+    color: white;
+    text-align: center;
+    top: 0px;
+    right: 12px;
+    width: 12px;
+    height: 12px;
+    border: 2px solid red;
+    border-radius: 2px;
+    background-color:red ;
+}
+
+ .kaywords{
+    float: left;
+    width: 538px;
+    height: 24px;
+    margin-left: 100px;
+    padding-top: 10px;
+    overflow: hidden;
+ }
+.kaywords a{
+    padding-right: 12px;
+   
+
+}
+/* nav开始*/
+.nav{
+    height: 54px;
+
+    border-bottom: 2px solid #B1191A;
+}
+.nav .no1{
+    float: left;
+    width: 150px;
+    height: 54px;
+    position: relative;
+    z-index: 10;
+    overflow: visible;
+}
+.no11{
+      background-color: #B1191A;
+    height: 54px;
+}
+.no11 a{
+    display: block;
+    padding-left: 10px;
+    font: 500 14px/54px "微软雅黑";
+    color: white;
+}
+.no12{
+   /*  float: left; */
+    height: 300px;
+   /*  width: 150px; */
+    background-color: pink;
+   }
+.no2{
+    width: 600px;
+    height: 54px;
+    float: left;
+    overflow: hidden;
+}
+.no2 li{
+    float: left;
+    height: 54px;
+}
+.no2 a{
+    display: block;
+    font: 14px/54px "microsoft yahei";
+    padding: 0 20px;
+}
+.no3{
+    float: right;
+}
+.banner604{
+    position: relative;
+}
+.banner604 a{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 604px;
+    background: url('../images/banner.jpg') no-repeat top center;
+}
+.main{
+    position: relative;
+    }
+.slider{
+    width: 700px;
+    height: 500px;
+    float: left;
+    position: relative;
+    margin: 12px 0 0  220px;
+    background-color:pink;
+}
+/* 网页底部开始 */
+
+.slogan{
+    height: 54px;
+    padding-top: 20px;
+     position: relative;
+    background-color: #f5f5f5;
+}
+.item{
+    width: 302px;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+}
+.slogen1{
+    margin-left: -304px;
+}
+.slogen2{
+    margin-left: -608px;
+}
+.slogen3{
+    margin-left: 304px;
+}
+.slogen4{
+    margin-left: 2px;
+}
+.sec{
+    height: 200px;
+}
+.div15{
+    height: 1px;
+    width: 1000px;
+}
+#denglu{
+    width: 200px;
+    height: 100px;
+    background-color: green;
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    margin: -100px;
+    z-index: 10010;
+    display: none;
+}
+#mask{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    background-color: rgba(0,0,0,.5);
+    display: none;
+}
+#guanbi{
+    display: block;
+    position: absolute;
+    width: 20px;Q
+    height: 20px;
+    top: 20px;
+    right: 20px;
+    color: white;
+    cursor: pointer;
+
+}

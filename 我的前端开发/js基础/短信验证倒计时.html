@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #box{
+            width: 300px;
+            height: 30px;
+            margin:100px auto;
+        }
+        #btn{
+
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var btn=document.getElementById("btn");
+            var timer=null;
+            btn.onclick=function(){
+                this.disabled=true;
+                var that=this;
+                timer=setInterval(func,1000);
+                var scount=5;
+                function func(){
+                    scount--;
+                    if(scount>=0){
+                        btn.innerHTML="还有"+scount+"秒";
+                    }
+                   else{
+                        btn.innerHTML="请重新点击发送";
+                        that.disabled=false;
+                        clearInterval(timer);
+                    }
+                }
+
+            }
+        }
+    </script>
+</head>
+<body>
+<div id="box">
+    <input type="text"/>
+    <button id="btn">请点击发送</button>
+</div>
+</body>
+</html>

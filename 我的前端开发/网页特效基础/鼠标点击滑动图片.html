@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        img{
+            width: 99px;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    </style>
+
+</head>
+<body>
+<img src="images/img.jpg" id="demo" alt=""/>
+</body>
+</html>
+<script>
+        var demo=document.getElementById("demo");
+        document.onclick=function(event){
+            var event=event||window.event;
+            targetX=event.clientX-demo.offsetWidth/2;
+            targetY=event.clientY-demo.offsetHeight/2;
+        }
+        var leaderX= 0,targetX= 0,leaderY= 0,targetY=0;
+        setInterval(function(){
+            leaderX=leaderX+(targetX-leaderX)/10;
+            leaderY=leaderY+(targetY-leaderY)/10;
+            demo.style.left=leaderX+"px";
+            demo.style.top=leaderY+"px";
+        },10);
+</script>

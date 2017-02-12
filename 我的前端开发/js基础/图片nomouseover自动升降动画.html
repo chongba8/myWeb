@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #box{
+            width: 512px;
+            height: 500px;
+            border: 1px solid yellow;
+            margin: 100px auto;
+            overflow: hidden;
+            /*position: relative;*/
+        }
+        #up{
+            width: 512px;
+            height: 250px;
+            position: absolute;
+            /*left: 0;*/
+            /*top: 0;*/
+            /*background-color: rgba(255,255,255,.5);*/
+        }
+        #down{
+            width: 512px;
+            height: 250px;
+            position: absolute;
+            /*left: 0;*/
+            /*bottom: 0;*/
+            margin-top: 250px;
+            /*background-color: rgba(255,255,255,.5);*/
+        }
+        #tu{
+            margin-top: 0;
+            margin-left: 0;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var num=0;
+            var timer=null;
+            function $(id){return document.getElementById(id)}
+            $("up").onmouseover=function(){
+                clearInterval(timer);
+                 timer=setInterval(function(){
+                    num-=3;
+                    num>=-970? $("tu").style.marginTop=num+"px" : clearInterval(timer);
+                },30);
+            }
+            $("down").onmouseover=function(){
+                clearInterval(timer);
+                 timer=setInterval(function(){
+                    num+=3;
+                    num<=0? $("tu").style.marginTop=num+"px" : clearInterval(timer);
+                },30);
+            }
+            $("up").parentNode.onmouseout = function() {
+                clearInterval(timer);
+            }
+        }
+    </script>
+</head>
+<body>
+<div id="box">
+    <span id="up"></span>
+    <span id="down"></span>
+    <img src="images/mi.png" id="tu" alt=""/ >
+</div>
+</body>
+</html>

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select{margin:0;padding:0}
+        body{font:12px"宋体","Arial Narrow",HELVETICA;background:#fff;-webkit-text-size-adjust:100%;}
+        a{color:#2d374b;text-decoration:none;cursor: pointer;}
+        a:hover{color:#cd0200;text-decoration:none;}
+        em{font-style:normal}
+        li{list-style:none}
+        img{border:0;vertical-align:middle}
+        table{border-collapse:collapse;border-spacing:0}
+        p{word-wrap:break-word}
+        .center{
+            width: 1010px;
+            margin: 0 auto;
+        }
+        .header{
+            background: url("imgaes/wcbg20141016.jpg") no-repeat center;
+            height: 750px;
+            width: 100%;
+            margin: 0 auto;
+        }
+        .head-top{
+            padding-top: 82px;
+            height: 60px;
+        }
+        .head-top img:first-child{
+            width: 109px;
+            height: 60px;
+
+        }
+        .head-top ul{
+            float: right;
+            margin-top: 20px;
+        }
+        .head-top ul li{
+            display: block;
+            float: left;
+            padding: 0 10px;
+            border-right: 1px solid #ccc;
+            font:16px/20px "simsun";
+        }
+        .head-top ul li:last-child{
+            border-right: none;
+        }
+        .head-nav{
+            width: 1000px;
+            height: 40px;
+            position: relative;
+            padding-top: 5px;
+        }
+        .head-nav ul{
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 30;
+        }
+        .head-nav ul li{
+            display: block;
+            float: left;
+            height: 40px;
+            font:16px/40px "simsun";
+        }
+        .head-nav ul li span{
+            border-left:1px solid #AAC6E0;
+            padding: 0;
+            margin: 0;
+            width: 0;
+            position: absolute;
+            top: 10px;
+            right: 0px;
+            height: 18px;
+        }
+        .head-nav-second{
+            display: none;
+        }
+        .head-nav ul li a{
+            padding: 10px 10px;
+            position: relative;
+        }
+        .head-nav ul li a:hover{
+            color:#fff;
+        }
+        .head ul li:last-child{
+            border-right: none;
+        }
+        .head-nav-bgc{
+            height: 45px;
+            width: 44px;
+            background-color: #C00E0E;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .head-nav-second{
+            background-color: #C00E0E;
+            position: absolute;
+            width: 1000px;
+            height:28px;
+            top: 40px;
+            left: 0;
+            display: none;
+        }
+        .current{
+            display: block;
+        }
+        .head-nav .head-nav-second a{
+            display: block;
+            float: left;
+            padding: 0 15px;
+            font:14px/28px "simsun";
+            color:#fff;
+        }
+        .head-carousel{
+            width: 680px;
+            height: 380px;
+            overflow: hidden;
+            margin-top: 28px;
+            margin-left: 5px;
+            position: relative;
+        }
+        #carousel{
+            position: absolute;
+            top: 0;
+            left: -680px;
+            width: 40000px;
+            height: 380px;
+        }
+        .head-carousel img{
+            float: left;
+            display: block;
+            width: 680px;
+        }
+        .head-carousel-mark{
+            width: 680px;
+            height: 60px;
+            padding-top: 20px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            text-align: center;
+            background-color:rgba(0,0,0,0.7);
+        }
+        .circle{
+            float: left;
+            width: 18px;
+            height: 18px;
+            color:#000;
+            border-radius: 50%;
+            background-color: pink;
+            text-align: center;
+            line-height: 18px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        .head-carousel-mark h2{
+            color:#fff;
+        }
+        .head-carousel-moveLeft{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            opacity:0.5;
+            width: 30px;
+            height: 80px;
+            color:#fff;
+            cursor: pointer;
+            font:80px/80px "simsun";
+            font-weight: 100;
+        }
+        .head-carousel-moveRight{
+            position: absolute;
+            bottom: 0;
+            right: 10px;
+            width: 30px;
+            height: 80px;
+            color:#fff;
+            cursor: pointer;
+            font:80px/80px "simsun";
+            font-weight: 100;
+            opacity:0.5;
+        }
+        .carousel-index{
+            margin-left: 260px;
+            margin-top: 10px;
+        }
+        .head-carousel-moveRight:hover{
+            opacity: 0.8;
+        }
+        .head-carousel-moveLeft:hover{
+            opacity: 0.8;
+        }
+        .on{
+            background-color: purple;
+        }
+    </style>
+</head>
+<body>
+<div class="head-carousel">
+    <div id="carousel" >
+        <img src="imgaes/720ecaf572d7668bffa795a0100f8ea2.jpg" alt="dfefsfwewf"/>
+        <img src="imgaes/8de80116a003876790f72470b5a0253e.jpg" alt="世界冠军考和日本天才"/>
+        <img src="imgaes/887be9773a74185a29703e095bda1f86.jpg" alt="UFC宁广友"/>
+        <img src="imgaes/bc212cca9aa69317bd45f4cd69ba74d4.jpg" alt="UFC"/>
+        <img src="imgaes/smallffba4646e423b16d014f33f2987a93191483343279.jpg" alt="播求"/>
+        <img src="imgaes/5gyfw4nyte3.jpg" alt="Glory"/>
+        <img src="imgaes/720ecaf572d7668bffa795a0100f8ea2.jpg" alt="UFC李景亮"/>
+        <img src="imgaes/8de80116a003876790f72470b5a0253e.jpg" alt="世界冠军考和日本天才"/>
+    </div>
+    <div class="head-carousel-mark">
+        <h2>世界冠军考和日本天才</h2>
+        <div class="carousel-index">
+            <span class="circle on">1</span>
+            <span class="circle">2</span>
+            <span class="circle">3</span>
+            <span class="circle">4</span>
+            <span class="circle">5</span>
+            <span class="circle">6</span>
+        </div>
+        <div class="head-carousel-moveLeft"><</div>
+        <div class="head-carousel-moveRight">></div>
+    </div>
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.js"></script>>
+    <script>
+        $(function () {
+            //焦点轮播图
+            //点击图片移动
+
+            var index=1;
+            var timer=null;
+            var animated=false;//用于优化，连续点击时保证动画完成后点击才有效。
+            var $carousel=$("#carousel");
+            var timer=null;
+            var leader=-680,target=index*680;
+            $(".head-carousel-moveLeft").click(function () {
+                if(!animated){
+                    if(index==0){index=5;$carousel.css("left",-4080+'px')}//连续轮播的判断条件
+                    else{ index--;}
+                    ani();show()
+                }
+            })
+            $(".head-carousel-moveRight").click(function () {
+                if(!animated){
+                    if(index==7){index=1;$carousel.css("left",-680+'px')}//连续轮播的判断条件
+                    index++;
+                    ani();show();
+                }
+            })
+            //鼠标在圆圈标签上时，进行动画；
+            $(".circle").mouseover(function () {
+                $(this).addClass("on").siblings().removeClass("on");
+                index=$(this).index()+1;
+                if(!animated){
+                    ani();
+                }
+            })
+            //自动播放
+            autoplay();
+
+            $(".head-carousel").mouseover(function () {
+                stopplay();
+            })
+            $(".head-carousel").mouseleave(function () {
+                autoplay();
+
+            })
+            function ani(){
+                animated=true;
+                $carousel.animate({'left': -680 * index+'px'}, 500,function(){animated=false;});
+                var text=$("#carousel img").eq(index).attr("alt");
+                $(".head-carousel-mark h2").text(text);
+            }
+            function show(){
+                $(".circle").removeClass("on");
+                if(index-1==6) {$(".circle").eq(0).addClass("on");}
+                else{$(".circle").eq(index-1).addClass("on");}
+            }
+            function autoplay(){
+                timer=setInterval(function () {
+                    $(".head-carousel-moveRight").click();
+                },1500)
+            }
+            function stopplay(){
+                clearInterval(timer);
+            }
+
+        })
+    </script>
+</html>

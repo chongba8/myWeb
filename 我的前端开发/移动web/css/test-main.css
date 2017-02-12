@@ -1,0 +1,251 @@
+/*
+* @Author: Administrator
+* @Date:   2017-01-30 18:37:04
+* @Last Modified by:   Administrator
+* @Last Modified time: 2017-02-03 23:03:05
+*/
+/* 公共样式 */
+a:hover{
+	text-decoration: none;
+}
+  .topbar{
+            height: 40px;
+            border-bottom: 1px solid #c0c0c0;
+            line-height: 40px;
+    }
+  .row div{
+    			height: 40px;
+    }
+   .row>div+div{
+   					border-left:1px solid #c0c0c0 ;
+   } 
+   .tb1 a{
+   	position: relative;
+   
+   }
+   
+.tb1 a:hover{
+			text-decoration: none;	
+}
+.tb1 a img{
+	display: none;
+}
+.tb1:hover a img{
+	display: block;
+	position: absolute;
+	left: 0;
+}
+
+#my-navbrand{
+	padding-top: 0;
+}
+#bs-example-navbar-collapse-1 li:hover{
+	border-bottom: 2px solid red;
+}
+#bs-example-navbar-collapse-1 li{
+	border-bottom: 2px solid transparent;
+}
+#bs-example-navbar-collapse-1 li{
+	font-weight: bold;
+}
+@media(min-width:800px){
+	#carousel-example-generic .carousel-inner div{
+	height: 410px;
+	background-position: center center;
+  }
+}
+#product{
+	padding-top: 50px;
+}
+#product div{
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
+
+#carousel-example-generic .carousel-inner div img{
+	width: 100%;
+}
+
+#my-navbar{
+	margin-bottom: 0;
+}
+#send{
+	height: 50px;
+	padding-top: 15px;
+	border-top:1px solid #ddd;
+	border-bottom:1px solid #ddd;
+}
+#send p{
+	float: left;
+	margin-left: 20px;
+}
+#send p:nth-of-type(3){
+	float: right;
+}
+.senda{
+	padding-left: 10px;
+	color: red !important;
+}
+#my_table{
+	background-color: #f0f0f0;
+    padding: 40px 0;
+
+}
+#my_table li:last-child{
+	float: right;
+}
+#my_table a{
+	color: #000;
+	font-weight:550;
+}
+#my_table.active{
+	background-color:;
+}
+#my_table .nav-tabs > li.active > a {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 4px solid #e92322;
+}
+.panel-czbk.actived::before {
+    content: "\e915";
+    font-family: itcast;
+    font-size: 50px;
+    position: absolute;
+    top: -11px;
+    left: 15px;
+}
+.money{
+	height: 150px;
+	background-color: #e92322;
+	position: relative;
+}
+.row div{
+	height: 150px;
+}
+.tab-content{
+	padding-top: 40px;
+}
+.money div:nth-of-type(1){
+	width: 70%;
+	border-right: 1px dashed #aaa;
+	float: left;
+	
+}
+.money div:nth-of-type(2){
+		position: relative;
+		float: right;
+		width: 30%;
+}
+.money div:nth-of-type(2)::before{
+	content:"";
+	width: 16px;
+	height: 16px;
+	border-radius: 8px;
+	background-color: #f0f0f0;
+	position: absolute;
+	left: -8px;
+	top: -8px;
+}
+.money div:nth-of-type(2)::after{
+	content:"";
+	width: 16px;
+	height: 16px;
+	border-radius: 8px;
+	background-color: #f0f0f0;
+	position: absolute;
+	left: -8px;
+	bottom: -8px;
+	box-shadow: 0px 2px 1px #aaa inset;
+}
+@media(max-width: 500px){  
+#my_table .ul-wrap{
+	overflow-x: scroll;
+	
+}
+#my_table .nav{
+	width: 650px;
+}
+}
+
+::-webkit-scrollbar 
+{
+	height: 0;
+}
+
+
+
+
+
+    /* /公共样式 */
+
+    /* 字体图标 */
+
+@font-face {
+  font-family: 'weijinsuo';
+  src: url('../font/MiFie-Web-Font.eot?6cyhth');
+  src: url('../font/MiFie-Web-Font.eot?6cyhth#iefix') format('embedded-opentype'), url('../font/MiFie-Web-Font.svg?6cyhth#MiFie-Web-Font') format('svg'), url('../font/MiFie-Web-Font.ttf?6cyhth') format('truetype'), url('../fonts/MiFie-Web-Font.woff?6cyhth') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'weijinsuo' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+.icon-icon {
+  color: #E9232C;
+  display: inline-block;
+  font-size: 50px;
+  line-height: 50px;
+  vertical-align: middle;
+}
+
+.icon-icon::before {
+  content: "\e920";
+}
+
+.icon-logo {
+  color: #434243;
+  display: inline-block;
+  font-size: 36px;
+  line-height: 50px;
+  vertical-align: middle;
+}
+
+.icon-logo::before {
+  content: "\e93e";
+}
+
+.icon-mobilephone:before {
+  content: "\e908";
+  font-size: 13px;
+}
+
+.icon-telephone:before {
+  content: "\e909";
+  font-size: 15px;
+}
+.icon-uniE907:before {
+    content: "\e907";
+    font-size: 32px;
+}
+.icon-uniE906:before {
+    content: "\e906";
+}
+.icon-uniE905:before {
+    content: "\e905";
+}
+    /* /字体图标 */
+   

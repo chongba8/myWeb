@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #box{
+            width: 600px;
+            height: 600px;
+            margin: 100px auto;
+            position: relative;
+            background: url("images/clock.jpg") no-repeat;
+        }
+        #box div{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        #min{
+            background: url("images/minute.png") no-repeat center center;
+        }
+        #hour{
+            background: url("images/hour.png") no-repeat center center;
+        }
+        #sec{
+            background: url("images/second.png") no-repeat center center;
+        }
+    </style>
+</head>
+<body>
+<div id="box">
+    <div id="hour"></div>
+    <div id="min"></div>
+    <div id="sec"></div>
+</div>
+</body>
+</html>
+<script>
+    setInterval(function () {
+        var hour=document.getElementById("hour");
+        var min=document.getElementById("min");
+        var sec=document.getElementById("sec");
+        var date=new Date("2015/12/12 12:00:00");
+        var now=new Date();
+        time=(now.getTime()-date.getTime())/1000;
+        var h=time/12/3600*360%360;
+        var m=time/3600*360%360;
+        var s=time/60*360%360;
+        sec.style.webkitTransform = "rotate("+s+"deg)";
+        //  变化            旋转    deg  度
+        min.style.webkitTransform = "rotate("+m+"deg)";
+        hour.style.webkitTransform = "rotate("+h+"deg)";
+
+    },50)
+</script>

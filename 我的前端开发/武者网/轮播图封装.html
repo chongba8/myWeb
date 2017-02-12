@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+    <div class="head-carousel">
+                <div id="carousel" >
+                    <img src="imgaes/720ecaf572d7668bffa795a0100f8ea2.jpg" alt="dfefsfwewf"/>
+                    <img src="imgaes/8de80116a003876790f72470b5a0253e.jpg" alt="世界冠军考和日本天才"/>
+                    <img src="imgaes/887be9773a74185a29703e095bda1f86.jpg" alt="UFC宁广友"/>
+                    <img src="imgaes/bc212cca9aa69317bd45f4cd69ba74d4.jpg" alt="UFC"/>
+                    <img src="imgaes/smallffba4646e423b16d014f33f2987a93191483343279.jpg" alt="播求"/>
+                    <img src="imgaes/5gyfw4nyte3.jpg" alt="Glory"/>
+                    <img src="imgaes/720ecaf572d7668bffa795a0100f8ea2.jpg" alt="UFC李景亮"/>
+                    <img src="imgaes/8de80116a003876790f72470b5a0253e.jpg" alt="世界冠军考和日本天才"/>
+                </div>
+                <div class="head-carousel-mark">
+                    <h2>世界冠军考和日本天才</h2>
+                    <div class="carousel-index">
+                        <span class="circle on">1</span>
+                        <span class="circle">2</span>
+                        <span class="circle">3</span>
+                        <span class="circle">4</span>
+                        <span class="circle">5</span>
+                        <span class="circle">6</span>
+                    </div>
+                    <div class="head-carousel-moveLeft"><</div>
+                    <div class="head-carousel-moveRight">></div>
+                </div>
+
+</div>
+    </body>
+</html>
+
+//焦点轮播图
+////点击图片移动
+<script src="jquery-1.11.1.js"></script>
+
+<script>
+	
+
+
+        var index=1;
+        var timer=null;
+        var animated=false;//用于优化，连续点击时保证动画完成后点击才有效。
+        var $carousel=$("#carousel");
+        var timer=null;
+        var leader=-680,target=index*680;
+        $(".head-carousel-moveLeft").click(function () {
+            if(!animated){
+            if(index==0){index=5;$carousel.css("left",-4080+'px')}//连续轮播的判断条件
+            else{ index--;}
+             ani();show()
+            }
+        })
+        $(".head-carousel-moveRight").click(function () {
+            if(!animated){
+            if(index==7){index=1;$carousel.css("left",-680+'px')}//连续轮播的判断条件
+            index++;
+            ani();show();
+            }
+        })
+        //鼠标在圆圈标签上时，进行动画；
+        $(".circle").mouseover(function () {
+            $(this).addClass("on").siblings().removeClass("on");
+            index=$(this).index()+1;
+            if(!animated){
+                ani();
+            }
+        })
+        //自动播放
+        autoplay();
+
+        $(".head-carousel").mouseover(function () {
+            stopplay();
+        })
+        $(".head-carousel").mouseleave(function () {
+            autoplay();
+
+        })
+        function ani(){
+         animated=true;
+        $carousel.animate({'left': -680 * index+'px'}, 500,function(){animated=false;});
+            var text=$("#carousel img").eq(index).attr("alt");
+            $(".head-carousel-mark h2").text(text);
+        }
+        function show(){
+            $(".circle").removeClass("on");
+            if(index-1==6) {$(".circle").eq(0).addClass("on");}
+            else{$(".circle").eq(index-1).addClass("on");}
+        }
+        function autoplay(){
+             timer=setInterval(function () {
+                $(".head-carousel-moveRight").click();
+            },1500)
+        }
+        function stopplay(){
+            clearInterval(timer);
+        }
+
+    })
+</script>

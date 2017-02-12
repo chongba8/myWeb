@@ -1,0 +1,106 @@
+/*
+* @Author: Administrator
+* @Date:   2017-02-07 21:30:53
+* @Last Modified by:   Administrator
+* @Last Modified time: 2017-02-11 12:33:06
+*/
+body{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background: #fff;
+}
+
+
+.cat-topbar form{
+	width: 100%;
+	height: 40px;
+	padding: 0 50px;
+	
+}
+.cat-topbar form input{
+	width: 100%;
+	height: 32px;
+	margin-top: 6px;
+	border: 1px solid #bfbfbf;
+	border-radius: 4px;
+}
+
+.category{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	padding-top: 45px;
+}
+.cat-left{
+	width: 90px;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding-top: 45px;
+	overflow: hidden;
+}
+.cat-right{
+	width: 100%;
+	height: 100%;
+	padding-left: 90px;
+	overflow: hidden;
+	
+}
+.cat-items{
+	width: 90px;
+
+}
+.cat-items li{
+	line-height: 50px;
+	width: 90px;
+	height: 50px;
+	font-size: 14px;
+	text-align: center;
+	background: #f3f4f6;
+	border-bottom: 1px solid #e0e0e0;
+	border-right: 1px solid #e0e0e0;
+}
+ .cat-items .now {
+	background-color:#fff;
+	  color: #f15353;
+	border-right: none;
+}
+.cat-rightbox{
+	padding: 12px 10px
+}
+
+.cat-banner{
+	width: 100%;
+}
+.cat-banner a {
+	display: block;
+	width: 100%;
+}
+.cat-banner a img{
+	width: 100%;
+}
+.cat-detail ul li{
+	float: left;
+	width: 33.333%;
+	text-align: center;
+	margin-top: 10px;
+}
+
+.cat-detail ul li a{
+	display: block;
+	width: 100%;
+}
+.cat-detail ul li a img{
+	height: 64px;
+	width: 64px;
+	margin: 0 auto;
+}
+.cat-detail h4{
+	display: block;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	height: 30px;
+
+}

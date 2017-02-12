@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul,ol{
+            list-style: none;
+        }
+        #box{
+            width: 490px;
+            height: 170px;
+            position: relative;
+            margin: 100px auto;
+            overflow: hidden;
+            border:1px solid #ccc;
+
+        }
+        #box ul{
+            width: 1000%;
+            float: left;
+          }
+        #box ul li{
+            float: left;
+            margin-right: 2px;
+        }
+        #box image{
+            /*float: left;*/
+            vertical-align: top;
+        }
+        #box span{
+            width: 40px;
+            height: 50px;
+            font:50px/50px "simsun";
+            text-align: center;
+            cursor: pointer;
+            display:none;
+            background: rgba(255, 255, 255,.5);
+        }
+        #mleft{
+            position: absolute;
+            left: 0;
+            top: 50%;
+            margin-top: -25px;
+        }
+        #mright{
+            position: absolute;
+            right: 0;
+            top: 50%;
+            margin-top: -25px;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+           function $(id){return document.getElementById(id)}
+            var ul=$("box").children[0];
+            var leader= 0,target=0;
+            var box=document.getElementById("box")
+            $("box").onmouseover=function(){
+                $("mleft").style.display="block";
+                $("mright").style.display="block";
+            }
+            $("box").onmouseout=function(){
+                $("mleft").style.display="none";
+                $("mright").style.display="none";
+            }
+            $("mleft").onclick=function(){
+                target-=492;
+            }
+            $("mright").onclick=function(){
+                target+=492;
+            }
+            setInterval(function(){
+                        if(target<=0){
+                            target=0;
+                        }
+                if(target>=1968){
+                    target=1968;
+                }
+                        leader=leader+(target-leader)/10;
+                        ul.style.marginLeft=-leader+"px";
+                    },30)
+        }
+    </script>
+</head>
+<body>
+<div id="box" class="slider">
+    <ul>
+        <li><img src="images/1.jpg" alt=""/></li>
+        <li><img src="images/2.jpg" alt=""/></li>
+        <li><img src="images/3.jpg" alt=""/></li>
+        <li><img src="images/4.jpg" alt=""/></li>
+        <li><img src="images/5.jpg" alt=""/></li>
+    </ul>
+    <span id="mleft"><</span>
+    <span id="mright">></span>
+
+</div>
+</body>
+</html>

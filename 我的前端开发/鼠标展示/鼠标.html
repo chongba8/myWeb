@@ -1,0 +1,70 @@
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>鼠标</title>
+	<script>
+	    window.onload=function(){
+		var box=document.getElementById("box");
+		function fn(liid,bg){
+			var obj=document.getElementById(liid);
+			obj.onmouseover=function(){
+				box.style.backgroundImage=bg;
+			}
+			}
+			fn("li01","url(images/01big.jpg)");
+			fn("li02","url(images/02big.jpg)");
+			fn("li03","url(images/03big.jpg)");
+			fn("li04","url(images/04big.jpg)");
+			fn("li05","url(images/05big.jpg)");
+		}
+	</script>
+
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#box{
+			width: 360px;
+			height: 70px;
+			padding-top: 360px;
+			margin: 100px auto;
+			border: 1px solid #ccc;
+			overflow: hidden;
+			background: url(images/01big.jpg) no-repeat;
+		}
+		#box ul{
+			list-style: none;
+			overflow: hidden;
+		}
+         #box li{
+         	float: left;
+         	border: 1px solid #ccc;
+         }	
+        
+        	
+         #box li a{
+         	display: block;
+         	width: 70px;
+         	height: 70px;
+         }
+       #box li:hover{
+       	border: 1px solid red;
+       }
+        
+	</style>
+</head>
+<body>
+	<div id="box">
+		<ul>
+			<li id="li01"><a href="#"><img src="images/01.jpg" alt=""></a></li>
+			<li id="li02"><a href="#"><img src="images/02.jpg" alt=""></a></li>
+			<li id="li03"><a href="#"><img src="images/03.jpg" alt=""></a></li>
+			<li id="li04"><a href="#"><img src="images/04.jpg" alt=""></a></li>
+			<li id="li05"><a href="#"><img src="images/05.jpg" alt=""></a></li>
+		</ul>
+	</div>
+
+</body>
+</html>
