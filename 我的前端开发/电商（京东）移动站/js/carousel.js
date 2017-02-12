@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2017-02-06 18:21:20
 * @Last Modified by:   Administrator
-* @Last Modified time: 2017-02-12 19:37:35
+* @Last Modified time: 2017-02-12 19:47:32
 */
 
 
@@ -58,15 +58,15 @@
         courselBox.style.marginLeft=-img_width+'px';
         //console.log(courselBox.style.marginLeft);
         courselBox.addEventListener('touchstart',function(){
-              event.preventdefault();
+              event.preventdefault;
              startX=event.targetTouches[0].clientX;
         },false)
         courselBox.addEventListener('touchmove',function(){
-          event.preventdefault();
+          event.preventdefault;
              endX=event.targetTouches[0].clientX;
         },false)
         courselBox.addEventListener('touchend',function(){
-          event.preventdefault();
+          event.preventdefault;
              dis=endX-startX;
               if(dis<0&& Math.abs(dis)>40){
                     moveLeft();
@@ -106,6 +106,9 @@
             leader=leader+(target-leader)/10;
             courselBox.style.marginLeft=-leader+'px';
         },30)
+       setInterval(function(){
+          moveLeft();
+       },3000)
 
      
         
