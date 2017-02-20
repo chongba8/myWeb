@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>canvas绘制表格 </title>
+</head>
+<body>
+
+    <canvas id="demo2"></canvas>
+
+<script>
+    (function(){
+        var canvas=document.querySelector('#demo2');
+        canvas.width=600;
+        canvas.height=600;
+        canvas.style.border="1px solid #000";
+        var pen=canvas.getContext('2d');
+        var rectWidth=10,rectHeight=10;
+        pen.lineWidth=.5;
+        pen.strokeStyle="#ccc";
+        for(var i= 0;i<canvas.width/rectWidth;i++){
+            pen.moveTo(0,rectHeight*i);
+            pen.lineTo(canvas.width,rectHeight*i);
+            pen.moveTo(rectWidth*i,0);
+            pen.lineTo(rectWidth*i,canvas.height);
+            pen.stroke();
+        }
+
+    }());
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>line</title>
+</head>
+<body>
+<canvas id="demo1" width="600" height="600">
+ie9以上才支持canvas，请将浏览器更新到ie9以上
+</canvas>
+<script>
+    var canvas=document.getElementById("demo1");
+    console.log(canvas);
+    var pen = canvas.getContext('2d');
+    pen.moveTo(100,100);
+    pen.lineTo(200,100);
+    pen.lineTo(200,200);
+    pen.closePath();
+    pen.strokeStyle="red";//设置线颜色；
+    pen.lineWidth=10;//设置线宽
+    pen.fillStyle="green";
+    pen.fill();//填充内部
+    pen.stroke();//填充显示路径
+</script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+    <canvas id="demo3">
+    	请升级您的浏览器
+    </canvas>
+    <button id="btn1">向左</button>
+    <button id="btn2">向右</button>
+    <button id="btn3">向前</button>
+    <button id="btn4">向后</button>
+    </body>
+    <script>
+    var btns=document.getElementsByTagName('button');
+    	var canvas=document.querySelector('canvas');
+    	//console.log(canvas);
+
+    	var ctx=canvas.getContext("2d");
+    	canvas.width=600;
+    	canvas.height=600;
+    	canvas.style.border="2px solid #000";
+    	//创建动画函数对象
+        //原始图片的大小；要展示部分的大小设置；图片的地址；
+        //
+        
+    	function ob(option){
+            this._init(option);
+        }
+        ob.prototype={
+            _init:function(option){
+                this.width=option.width;
+                this.height=option.height;
+                this.imgwidth=option.imgwidth;
+                this.imgheight=option.imgheight;
+                this.speed=option.speed;
+                this.imgsrc=option.imgsrc;
+                this.x=option.x;
+                this.y=option.y;
+                this._changeindex_y=option. _changeindex_y;
+            },
+            move:function(ctx){
+
+                    var swidth=this.imgwidth/4;
+                    var sheight=this.imgheight/4;
+                    var changeindex_x= 0;
+                    
+                    var sx=0;
+                    var sy=0;
+                    var img=new Image();
+                    
+                    img.src=this.imgsrc;
+                    var self=this;
+                    img.onload=function(){
+                       setInterval(function(){
+                     ctx.clearRect(0, 0, 600, 600);
+                     sy=sheight*self._changeindex_y;
+                     sx=swidth*changeindex_x;
+                    ctx.drawImage(img,sx,sy,swidth,sheight,self.x,self.y,self.width,self.height);
+                    changeindex_x++;
+                    //console.log(self._changeindex_y);
+                    //console.log(changeindex_x);
+                    if(changeindex_x==4){changeindex_x=0}
+                },self.speed)
+                
+            } 
+        },
+        
+                
+            left:function(){this._changeindex_y=1; },
+            right:function(){this._changeindex_y=2;},
+            forhead:function(){this._changeindex_y=0;},
+            back:function(){this._changeindex_y=3;},
+        }
+        
+        var boy=new ob({width:80,height:130,imgsrc:'imgs/DMMban.png',speed:200,imgwidth:160,imgheight:260,x:50,y:50,_changeindex_y:1});
+        boy.move(ctx);
+        btns[0].onclick=function(){boy.left()}
+        btns[1].onclick=function(){boy.right()}
+        btns[2].onclick=function(){boy.forhead()}
+        btns[3].onclick=function(){boy.back()}
+        
+    </script>
+</html>

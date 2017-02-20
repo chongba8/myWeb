@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<canvas id="demo3" width=600 height=600;></canvas>
+</body>
+<script>
+    var canvas=document.getElementById('demo3');
+    var pen=canvas.getContext('2d');
+//    pen.beginPath();
+//    pen.lineWidth=10;
+//    pen.strokeStyle="red";
+//    pen.rect(0,0,100,100);
+//    pen.stroke();
+//    pen.fill();
+    //绘制圆弧
+    pen.lineWidth=10;
+    pen.strokeStyle="red";
+    pen.moveTo(200,200);
+
+    //pen.arc(100,100,50,0,Math.PI*2,true);
+    pen.arc(200,200,100,0,Math.PI,true);
+    pen.closePath();
+    pen.stroke();
+    pen.fill();
+
+</script>
+</html>

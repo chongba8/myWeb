@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2017-02-04 20:50:16
 * @Last Modified by:   Administrator
-* @Last Modified time: 2017-02-12 10:09:37
+* @Last Modified time: 2017-02-14 18:07:51
 */
 body{
     background: #f5f5f5;
@@ -34,11 +34,13 @@ body{
     width: 60px;
     height: 36px;
     display: block;
-    background: url('../imgs/pp.fw.png') no-repeat 6px 0;
-    -webkit-background-size: 60px 36px;
-    background-size: 60px 36px;
+    background: url('../imgs/sprites.png') no-repeat;
+    background-size: 200px 200px;
+    background-position:0 -103px;
     position: absolute;
-    opacity: 0.6;
+     top: 4px;
+    left: 10px;
+    opacity: 0.9;
 }
 .headbox form{
 	padding-left: 75px;

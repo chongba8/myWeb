@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2017-02-11 15:42:33
 * @Last Modified by:   Administrator
-* @Last Modified time: 2017-02-12 11:20:39
+* @Last Modified time: 2017-02-20 15:55:09
 */
 window.onload=function(){
 	var checked=document.getElementsByClassName('choose');
@@ -12,7 +12,7 @@ window.onload=function(){
 	var btn2=document.getElementsByClassName('delebtn')[0].getElementsByTagName('button')[1];
 	var body=document.getElementsByTagName('body')[0];
 	var back=document.getElementsByClassName('icon_back')[0];
-	console.log(body);
+	//console.log(body);
 		back1(body,back);
 	//遍历选中点击
 	for(var i=0,length=checked.length;i<length;i++){

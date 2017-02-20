@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <script src="js/konva.js"></script>
+        <script type="text/javascript" src="js/universe.js"></script>
+        <style>
+        	*{margin: 0;padding: 0;}
+        	
+        	#container{border:1px solid #ccc; margin: 0 auto ;width: 500px;height: 50%;background-color: #f0f0f0;}
+        </style>
+    </head>
+    <body>
+    <div id="container"></div>
+    </body>
+    <script>
+    /*封装这个宇宙模型动画*/
+    var radius1=100,radius2=180,radius3=240;
+    var options={
+        container:'container',
+        option0:{ x:250, y:250, text:'css3',radius:50, style:'#111111'},
+        option1:{ x:radius1*Math.cos(60/180*Math.PI), y:radius1*Math.sin(60/180*Math.PI), text:'abc', radius:25, style:'red'},
+        option2:{x:radius1*Math.cos(180/180*Math.PI), y:radius1*Math.sin(180/180*Math.PI), text:'abs', radius:25, style:'orange', },
+        option3:{x:radius1*Math.cos(300/180*Math.PI), y:radius1*Math.sin(300/180*Math.PI), text:'css3', radius:25, style:'green'},
+        option4:{x:radius2*Math.cos(0/180*Math.PI), y:radius2*Math.sin(0/180*Math.PI), text:'css3', radius:30, style:'#525A82', },
+        option5:{x:radius2*Math.cos(120/180*Math.PI), y:radius2*Math.sin(120/180*Math.PI), text:'css3', radius:30, style:'#525A82', } ,
+        option6:{x:radius2*Math.cos(240/180*Math.PI), y:radius2*Math.sin(240/180*Math.PI), text:'css3', radius:30, style:'#525A82', },
+
+         }
+   
+    universe(options);
+
+    	
+    </script>
+</html>
